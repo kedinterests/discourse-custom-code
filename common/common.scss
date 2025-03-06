@@ -1,153 +1,18 @@
-/**********************Hide allow PM from profile page (JP)**************************/
-div.control-group.private-messages {
-    display: none;
-}
-/***********************************/
-
 /********************************Highlight pinned topic**********************************/
 tr[data-topic-id='75463'], tr[data-topic-id='75533'] {
 /*tr.pinned*/
-    background-color: #ccffcc!important;
+  background-color: #ccffcc!important;
 }
 /**************************************/
 
-/*******************  Former Theme Component (Misc MRF Tweaks) ****************************/
-
-///// Style the core Discourse header //////
-/*.IGNOREd-header #site-logo {
-    max-height: 100px;
-}*/
-
-// Chris Malone  Additions //
-.d-header #site-logo {
-    height:3.2em;
-}
-
-/*.IGNOREd-header {
-    height: 120px;
-}*/
-
 // Add underline to link within posts upon hovering
 .cooked a:hover {
-    text-decoration: underline;
-}
-
-
-// Add vertical spacing to the list of expandable details on the FAQ page
-.static-faq details {
-    //padding-bottom: 10px;
-    margin-bottom: 1px;
-    //padding: 1px;
-}
-
-
-.topic-list .main-link a.title, a.mineral-services-directory {
-    color: #2575AD!important;
-    font-weight: bold!important;
-}
-
-.topic-list .main-link a.title:hover, a.mineral-services-directory:hover {
-    color: #cd2626!important;
-}
-
-
-// Taylor additions ///
-
-// Remove padding
-.list-controls .container {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-// Darken the category descriptions
-.category-description {
-   color: #646464 !important;
-}
-
-
-/*****************************************************************/
-
-/*******************  Set Category Logo Max Height (JP) ****************************/
-
-.category-logo.aspect-image {
-    max-width: 200px;
-    --max-height: 75px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 15px;
-}
-/*****************************************************************/
-
-/*******************  Style Business Member Signature (TH) ****************************/
-.group-signature {
-    font-weight: bold;
-    a {
-        color: #3E7EE7 !important;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-/*****************************************************************/
-
-/*******************  "New Topic" and "Post Topic" Button ****************************/
-
-button#create-topic.btn,
-button.groups-header-new, 
-#new-create-topic {
-    color: white!important;
-    background: var(--tertiary);
-}
-
-// Post Topic button on composer
-.topic .btn.btn-icon-text.btn-primary.create {
-    color: white!important;
-    background: var(--tertiary)!important;
-}
-#create-topic > svg {
-    fill:#fff!important;
-}
-/*****************************************************************/
-// Hides the About Field on Profile page (and removes edit access) for non-business members (this is an upsell)
-// This will also show the about field for admin users
-body:not(.primary-group-businessmember):not(.admin-user) .pref-bio {
-    display: none;
-}
-
-body:not(.primary-group-businessmember):not(.admin-user) .pref-website {
-    display: none;
-}
-
-body:not(.primary-group-businessmember):not(.admin-user) .pref-profile-bg {
-    display: none;
-}
-
-body:not(.primary-group-businessmember):not(.admin-user) .names__secondary {
-    display: none;
-}
-
-/****************** Change Topic Hover Color *******************/
-.topic-list-item,
-.latest-topic-list-item {
-  &:hover {
-    background: rgba(var(--primary-rgb), 0.055)!important;
-  }
-}
-
-/******** Hide Author on Published Pages **********************/
-.published-page-author {
-    display:none!important;
-}
-
-
-/************** Hide Click Badge in Post for Non-Admins *****************/
-body:not(.staff) .badge.badge-notification.clicks {
-    display: none;
+  text-decoration: underline;
 }
 
 /**************** PM Icon Color *******************/
 .private-message-glyph {
-    color:green!important;
+  color:green!important;
 }
 .composer-action-privateMessage {
   background-color: #e0ffe2!important;
@@ -156,10 +21,50 @@ body:not(.staff) .badge.badge-notification.clicks {
   background-color: #28b332!important;
 }
 .private-message .d-editor-preview-wrapper {
-    /* Your styles here */
-    background-color: #ffffff;
-    border: 1px solid #ccc;
+  /* Your styles here */
+  background-color: #ffffff;
+  border: 1px solid #ccc;
 }
 .private-message .d-editor-preview {
-    padding:20px!important;
+  padding:20px!important;
+}
+
+.category-heading {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 1rem; /* Add space between the logo and text */
+}
+
+.category-logo {
+  display: flex;
+  align-items: center; /* Ensures the image inside is aligned */
+}
+
+.category-logo img {
+  max-height: 100px; /* Adjust as needed */
+  width: auto;
+}
+
+.category-heading p {
+  margin: 0; /* Remove default margin */
+}
+
+.global-notice {
+  text-align:center!important;
+  font-weight: 600!important;
+}
+
+/* Welcome and search block */
+.custom-search-banner-wrap {
+  background:#f3f3f3!important;
+}
+
+.global-notice {
+  text-align: center!important;
+}
+
+.custom-search-banner {
+  background: #f3f3f3!important;
+  margin-left:10px;
+  margin-right:10px;
 }
